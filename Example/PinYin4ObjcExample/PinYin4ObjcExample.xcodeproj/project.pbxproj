@@ -1,0 +1,529 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D40371F17E740210061FF18 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D40371E17E740210061FF18 /* UIKit.framework */; };
+		1D40372117E740210061FF18 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D40372017E740210061FF18 /* Foundation.framework */; };
+		1D40372317E740210061FF18 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D40372217E740210061FF18 /* CoreGraphics.framework */; };
+		1D40372917E740210061FF18 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1D40372717E740210061FF18 /* InfoPlist.strings */; };
+		1D40372B17E740210061FF18 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D40372A17E740210061FF18 /* main.m */; };
+		1D40372F17E740210061FF18 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D40372E17E740210061FF18 /* AppDelegate.m */; };
+		1D40373117E740210061FF18 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D40373017E740210061FF18 /* Default.png */; };
+		1D40373317E740210061FF18 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D40373217E740210061FF18 /* Default@2x.png */; };
+		1D40373517E740210061FF18 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D40373417E740210061FF18 /* Default-568h@2x.png */; };
+		1D40373817E740210061FF18 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D40373617E740210061FF18 /* MainStoryboard.storyboard */; };
+		1D40373B17E740210061FF18 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D40373A17E740210061FF18 /* ViewController.m */; };
+		1D40374317E740210061FF18 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D40374217E740210061FF18 /* SenTestingKit.framework */; };
+		1D40374417E740210061FF18 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D40371E17E740210061FF18 /* UIKit.framework */; };
+		1D40374517E740210061FF18 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D40372017E740210061FF18 /* Foundation.framework */; };
+		1D40374D17E740210061FF18 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1D40374B17E740210061FF18 /* InfoPlist.strings */; };
+		1D40375017E740210061FF18 /* PinYin4ObjcExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D40374F17E740210061FF18 /* PinYin4ObjcExampleTests.m */; };
+		1D40378717E741D20061FF18 /* ChineseToPinyinResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D40377A17E741D20061FF18 /* ChineseToPinyinResource.m */; };
+		1D40378817E741D20061FF18 /* HanyuPinyinOutputFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D40377C17E741D20061FF18 /* HanyuPinyinOutputFormat.m */; };
+		1D40378917E741D20061FF18 /* NSString+PinYin4Cocoa.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D40377E17E741D20061FF18 /* NSString+PinYin4Cocoa.m */; };
+		1D40378B17E741D20061FF18 /* PinyinFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D40378217E741D20061FF18 /* PinyinFormatter.m */; };
+		1D40378C17E741D20061FF18 /* PinyinHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D40378417E741D20061FF18 /* PinyinHelper.m */; };
+		1D40378D17E741D20061FF18 /* unicode_to_hanyu_pinyin.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1D40378617E741D20061FF18 /* unicode_to_hanyu_pinyin.txt */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1D40374617E740210061FF18 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1D40371317E740210061FF18 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1D40371A17E740210061FF18;
+			remoteInfo = PinYin4ObjcExample;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1D40371B17E740210061FF18 /* PinYin4ObjcExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PinYin4ObjcExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D40371E17E740210061FF18 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		1D40372017E740210061FF18 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D40372217E740210061FF18 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1D40372617E740210061FF18 /* PinYin4ObjcExample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PinYin4ObjcExample-Info.plist"; sourceTree = "<group>"; };
+		1D40372817E740210061FF18 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1D40372A17E740210061FF18 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1D40372C17E740210061FF18 /* PinYin4ObjcExample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PinYin4ObjcExample-Prefix.pch"; sourceTree = "<group>"; };
+		1D40372D17E740210061FF18 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1D40372E17E740210061FF18 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1D40373017E740210061FF18 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		1D40373217E740210061FF18 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		1D40373417E740210061FF18 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		1D40373717E740210061FF18 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		1D40373917E740210061FF18 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		1D40373A17E740210061FF18 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		1D40374117E740210061FF18 /* PinYin4ObjcExampleTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PinYin4ObjcExampleTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D40374217E740210061FF18 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		1D40374A17E740210061FF18 /* PinYin4ObjcExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PinYin4ObjcExampleTests-Info.plist"; sourceTree = "<group>"; };
+		1D40374C17E740210061FF18 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1D40374E17E740210061FF18 /* PinYin4ObjcExampleTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PinYin4ObjcExampleTests.h; sourceTree = "<group>"; };
+		1D40374F17E740210061FF18 /* PinYin4ObjcExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PinYin4ObjcExampleTests.m; sourceTree = "<group>"; };
+		1D40377917E741D20061FF18 /* ChineseToPinyinResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChineseToPinyinResource.h; sourceTree = "<group>"; };
+		1D40377A17E741D20061FF18 /* ChineseToPinyinResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChineseToPinyinResource.m; sourceTree = "<group>"; };
+		1D40377B17E741D20061FF18 /* HanyuPinyinOutputFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HanyuPinyinOutputFormat.h; sourceTree = "<group>"; };
+		1D40377C17E741D20061FF18 /* HanyuPinyinOutputFormat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HanyuPinyinOutputFormat.m; sourceTree = "<group>"; };
+		1D40377D17E741D20061FF18 /* NSString+PinYin4Cocoa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+PinYin4Cocoa.h"; sourceTree = "<group>"; };
+		1D40377E17E741D20061FF18 /* NSString+PinYin4Cocoa.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+PinYin4Cocoa.m"; sourceTree = "<group>"; };
+		1D40378117E741D20061FF18 /* PinyinFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinyinFormatter.h; sourceTree = "<group>"; };
+		1D40378217E741D20061FF18 /* PinyinFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinyinFormatter.m; sourceTree = "<group>"; };
+		1D40378317E741D20061FF18 /* PinyinHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinyinHelper.h; sourceTree = "<group>"; };
+		1D40378417E741D20061FF18 /* PinyinHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinyinHelper.m; sourceTree = "<group>"; };
+		1D40378617E741D20061FF18 /* unicode_to_hanyu_pinyin.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = unicode_to_hanyu_pinyin.txt; sourceTree = "<group>"; };
+		1D40378E17E742940061FF18 /* PinYin4Objc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PinYin4Objc.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D40371817E740210061FF18 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D40371F17E740210061FF18 /* UIKit.framework in Frameworks */,
+				1D40372117E740210061FF18 /* Foundation.framework in Frameworks */,
+				1D40372317E740210061FF18 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D40373D17E740210061FF18 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D40374317E740210061FF18 /* SenTestingKit.framework in Frameworks */,
+				1D40374417E740210061FF18 /* UIKit.framework in Frameworks */,
+				1D40374517E740210061FF18 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1D40371217E740210061FF18 = {
+			isa = PBXGroup;
+			children = (
+				1D40377717E741D20061FF18 /* PinYin4Objc */,
+				1D40372417E740210061FF18 /* PinYin4ObjcExample */,
+				1D40374817E740210061FF18 /* PinYin4ObjcExampleTests */,
+				1D40371D17E740210061FF18 /* Frameworks */,
+				1D40371C17E740210061FF18 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1D40371C17E740210061FF18 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D40371B17E740210061FF18 /* PinYin4ObjcExample.app */,
+				1D40374117E740210061FF18 /* PinYin4ObjcExampleTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1D40371D17E740210061FF18 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1D40371E17E740210061FF18 /* UIKit.framework */,
+				1D40372017E740210061FF18 /* Foundation.framework */,
+				1D40372217E740210061FF18 /* CoreGraphics.framework */,
+				1D40374217E740210061FF18 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1D40372417E740210061FF18 /* PinYin4ObjcExample */ = {
+			isa = PBXGroup;
+			children = (
+				1D40372D17E740210061FF18 /* AppDelegate.h */,
+				1D40372E17E740210061FF18 /* AppDelegate.m */,
+				1D40373617E740210061FF18 /* MainStoryboard.storyboard */,
+				1D40373917E740210061FF18 /* ViewController.h */,
+				1D40373A17E740210061FF18 /* ViewController.m */,
+				1D40372517E740210061FF18 /* Supporting Files */,
+			);
+			path = PinYin4ObjcExample;
+			sourceTree = "<group>";
+		};
+		1D40372517E740210061FF18 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1D40372617E740210061FF18 /* PinYin4ObjcExample-Info.plist */,
+				1D40372717E740210061FF18 /* InfoPlist.strings */,
+				1D40372A17E740210061FF18 /* main.m */,
+				1D40372C17E740210061FF18 /* PinYin4ObjcExample-Prefix.pch */,
+				1D40373017E740210061FF18 /* Default.png */,
+				1D40373217E740210061FF18 /* Default@2x.png */,
+				1D40373417E740210061FF18 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1D40374817E740210061FF18 /* PinYin4ObjcExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				1D40374E17E740210061FF18 /* PinYin4ObjcExampleTests.h */,
+				1D40374F17E740210061FF18 /* PinYin4ObjcExampleTests.m */,
+				1D40374917E740210061FF18 /* Supporting Files */,
+			);
+			path = PinYin4ObjcExampleTests;
+			sourceTree = "<group>";
+		};
+		1D40374917E740210061FF18 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1D40374A17E740210061FF18 /* PinYin4ObjcExampleTests-Info.plist */,
+				1D40374B17E740210061FF18 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1D40377717E741D20061FF18 /* PinYin4Objc */ = {
+			isa = PBXGroup;
+			children = (
+				1D40377817E741D20061FF18 /* Classes */,
+				1D40378517E741D20061FF18 /* Resources */,
+			);
+			name = PinYin4Objc;
+			path = ../../PinYin4Objc;
+			sourceTree = "<group>";
+		};
+		1D40377817E741D20061FF18 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				1D40377917E741D20061FF18 /* ChineseToPinyinResource.h */,
+				1D40377A17E741D20061FF18 /* ChineseToPinyinResource.m */,
+				1D40377B17E741D20061FF18 /* HanyuPinyinOutputFormat.h */,
+				1D40377C17E741D20061FF18 /* HanyuPinyinOutputFormat.m */,
+				1D40377D17E741D20061FF18 /* NSString+PinYin4Cocoa.h */,
+				1D40377E17E741D20061FF18 /* NSString+PinYin4Cocoa.m */,
+				1D40378117E741D20061FF18 /* PinyinFormatter.h */,
+				1D40378217E741D20061FF18 /* PinyinFormatter.m */,
+				1D40378317E741D20061FF18 /* PinyinHelper.h */,
+				1D40378417E741D20061FF18 /* PinyinHelper.m */,
+				1D40378E17E742940061FF18 /* PinYin4Objc.h */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		1D40378517E741D20061FF18 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1D40378617E741D20061FF18 /* unicode_to_hanyu_pinyin.txt */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D40371A17E740210061FF18 /* PinYin4ObjcExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D40375317E740210061FF18 /* Build configuration list for PBXNativeTarget "PinYin4ObjcExample" */;
+			buildPhases = (
+				1D40371717E740210061FF18 /* Sources */,
+				1D40371817E740210061FF18 /* Frameworks */,
+				1D40371917E740210061FF18 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PinYin4ObjcExample;
+			productName = PinYin4ObjcExample;
+			productReference = 1D40371B17E740210061FF18 /* PinYin4ObjcExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1D40374017E740210061FF18 /* PinYin4ObjcExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D40375617E740210061FF18 /* Build configuration list for PBXNativeTarget "PinYin4ObjcExampleTests" */;
+			buildPhases = (
+				1D40373C17E740210061FF18 /* Sources */,
+				1D40373D17E740210061FF18 /* Frameworks */,
+				1D40373E17E740210061FF18 /* Resources */,
+				1D40373F17E740210061FF18 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1D40374717E740210061FF18 /* PBXTargetDependency */,
+			);
+			name = PinYin4ObjcExampleTests;
+			productName = PinYin4ObjcExampleTests;
+			productReference = 1D40374117E740210061FF18 /* PinYin4ObjcExampleTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1D40371317E740210061FF18 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = kimziv;
+			};
+			buildConfigurationList = 1D40371617E740210061FF18 /* Build configuration list for PBXProject "PinYin4ObjcExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 1D40371217E740210061FF18;
+			productRefGroup = 1D40371C17E740210061FF18 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D40371A17E740210061FF18 /* PinYin4ObjcExample */,
+				1D40374017E740210061FF18 /* PinYin4ObjcExampleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D40371917E740210061FF18 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D40372917E740210061FF18 /* InfoPlist.strings in Resources */,
+				1D40373117E740210061FF18 /* Default.png in Resources */,
+				1D40373317E740210061FF18 /* Default@2x.png in Resources */,
+				1D40373517E740210061FF18 /* Default-568h@2x.png in Resources */,
+				1D40373817E740210061FF18 /* MainStoryboard.storyboard in Resources */,
+				1D40378D17E741D20061FF18 /* unicode_to_hanyu_pinyin.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D40373E17E740210061FF18 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D40374D17E740210061FF18 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1D40373F17E740210061FF18 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D40371717E740210061FF18 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D40372B17E740210061FF18 /* main.m in Sources */,
+				1D40372F17E740210061FF18 /* AppDelegate.m in Sources */,
+				1D40373B17E740210061FF18 /* ViewController.m in Sources */,
+				1D40378717E741D20061FF18 /* ChineseToPinyinResource.m in Sources */,
+				1D40378817E741D20061FF18 /* HanyuPinyinOutputFormat.m in Sources */,
+				1D40378917E741D20061FF18 /* NSString+PinYin4Cocoa.m in Sources */,
+				1D40378B17E741D20061FF18 /* PinyinFormatter.m in Sources */,
+				1D40378C17E741D20061FF18 /* PinyinHelper.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D40373C17E740210061FF18 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D40375017E740210061FF18 /* PinYin4ObjcExampleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1D40374717E740210061FF18 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1D40371A17E740210061FF18 /* PinYin4ObjcExample */;
+			targetProxy = 1D40374617E740210061FF18 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1D40372717E740210061FF18 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1D40372817E740210061FF18 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1D40373617E740210061FF18 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1D40373717E740210061FF18 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		1D40374B17E740210061FF18 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1D40374C17E740210061FF18 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1D40375117E740210061FF18 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1D40375217E740210061FF18 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1D40375417E740210061FF18 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PinYin4ObjcExample/PinYin4ObjcExample-Prefix.pch";
+				INFOPLIST_FILE = "PinYin4ObjcExample/PinYin4ObjcExample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		1D40375517E740210061FF18 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PinYin4ObjcExample/PinYin4ObjcExample-Prefix.pch";
+				INFOPLIST_FILE = "PinYin4ObjcExample/PinYin4ObjcExample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		1D40375717E740210061FF18 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PinYin4ObjcExample.app/PinYin4ObjcExample";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PinYin4ObjcExample/PinYin4ObjcExample-Prefix.pch";
+				INFOPLIST_FILE = "PinYin4ObjcExampleTests/PinYin4ObjcExampleTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		1D40375817E740210061FF18 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PinYin4ObjcExample.app/PinYin4ObjcExample";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PinYin4ObjcExample/PinYin4ObjcExample-Prefix.pch";
+				INFOPLIST_FILE = "PinYin4ObjcExampleTests/PinYin4ObjcExampleTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D40371617E740210061FF18 /* Build configuration list for PBXProject "PinYin4ObjcExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D40375117E740210061FF18 /* Debug */,
+				1D40375217E740210061FF18 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1D40375317E740210061FF18 /* Build configuration list for PBXNativeTarget "PinYin4ObjcExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D40375417E740210061FF18 /* Debug */,
+				1D40375517E740210061FF18 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1D40375617E740210061FF18 /* Build configuration list for PBXNativeTarget "PinYin4ObjcExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D40375717E740210061FF18 /* Debug */,
+				1D40375817E740210061FF18 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1D40371317E740210061FF18 /* Project object */;
+}
