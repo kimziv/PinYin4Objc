@@ -24,6 +24,7 @@ PinYin4Objc is a popular objective-c library supporting convertion between Chine
       		_outputTv.text=pinYin; //update ui
 
  		 }];
+ 		 
  2. use sync  method below:
  
 		NSString *sourceText=@"我爱中文";
