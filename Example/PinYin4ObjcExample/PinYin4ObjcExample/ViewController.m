@@ -35,7 +35,7 @@
     [outputFormat setCaseType:CaseTypeLowercase];
     NSTimeInterval startTime=[[NSDate date] timeIntervalSince1970];
     
-  [PinyinHelper toHanyuPinyinStringWithNSString:sourceText withHanyuPinyinOutputFormat:outputFormat withNSString:@"" outputBlock:^(NSString *pinYin) {
+  [PinyinHelper toHanyuPinyinStringWithNSString:sourceText withHanyuPinyinOutputFormat:outputFormat withNSString:@" " outputBlock:^(NSString *pinYin) {
       NSTimeInterval endTime=[[NSDate date] timeIntervalSince1970];
       NSTimeInterval totalTime=endTime-startTime;
       _timeLb.text=[NSString stringWithFormat:@"Total Time:%fs",totalTime];

@@ -9,6 +9,12 @@
 #define RIGHT_BRACKET @")"
 #define COMMA @","
 
+#ifdef DEBUG
+#define PYLog(...) NSLog(__VA_ARGS__)
+#else
+#define PYLog(__unused ...)
+#endif
+
 #define kCacheKeyForUnicode2Pinyin @"UnicodeToPinyin"
 static inline NSString* cachePathForKey(NSString* directory, NSString* key) {
 	return [directory stringByAppendingPathComponent:key];
@@ -38,7 +44,7 @@ static inline NSString* cachePathForKey(NSString* directory, NSString* key) {
     {
         NSError *error=nil;
         if (![fileManager createDirectoryAtPath:_directory withIntermediateDirectories:YES attributes:nil error:&error]) {
-            NSLog(@"Error, s is %@, %s, %s, %d",error.description, __FILE__ ,__FUNCTION__, __LINE__);
+            PYLog(@"Error, s is %@, %s, %s, %d",error.description, __FILE__ ,__FUNCTION__, __LINE__);
         }
         
     }
@@ -83,7 +89,7 @@ static inline NSString* cachePathForKey(NSString* directory, NSString* key) {
             NSError *error=nil;
             [data writeToFile:cachePath options:NSDataWritingAtomic error:&error];
             if (error){
-                NSLog(@"Error, s is %@, %s, %s, %d",error.description, __FILE__ ,__FUNCTION__, __LINE__);
+                PYLog(@"Error, s is %@, %s, %s, %d",error.description, __FILE__ ,__FUNCTION__, __LINE__);
             }
     });
 }
