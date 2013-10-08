@@ -34,14 +34,21 @@
     [outputFormat setVCharType:VCharTypeWithV];
     [outputFormat setCaseType:CaseTypeLowercase];
     NSTimeInterval startTime=[[NSDate date] timeIntervalSince1970];
-    NSString *outputPinyin=[PinyinHelper toHanyuPinyinStringWithNSString:sourceText withHanyuPinyinOutputFormat:outputFormat withNSString:@" "];
-    NSTimeInterval endTime=[[NSDate date] timeIntervalSince1970];
-    NSTimeInterval totalTime=endTime-startTime;
-    _timeLb.text=[NSString stringWithFormat:@"Total Time:%fs",totalTime];
-    _wordsLb.text=[NSString stringWithFormat:@"Total Words:%i characters",sourceText.length];
-    //    NSLog(@"%@:%@, seconds:%f",sourceText,outputPinyin,(end - begin)/(float)CLOCKS_PER_SEC);
-    _outputTv.text=outputPinyin;
-    //[NSString stringWithFormat:@"%@:%@, seconds:%fs",sourceText,outputPinyin,totalTime];
+    
+  [PinyinHelper toHanyuPinyinStringWithNSString:sourceText withHanyuPinyinOutputFormat:outputFormat withNSString:@" " outputBlock:^(NSString *pinYin) {
+      NSTimeInterval endTime=[[NSDate date] timeIntervalSince1970];
+      NSTimeInterval totalTime=endTime-startTime;
+      _timeLb.text=[NSString stringWithFormat:@"Total Time:%fs",totalTime];
+      _wordsLb.text=[NSString stringWithFormat:@"Total Words:%i characters",sourceText.length];
+      _outputTv.text=pinYin;
+
+  }];
+//    NSString *outputPinyin=[PinyinHelper toHanyuPinyinStringWithNSString:sourceText withHanyuPinyinOutputFormat:outputFormat withNSString:@" "];
+//    NSTimeInterval endTime=[[NSDate date] timeIntervalSince1970];
+//    NSTimeInterval totalTime=endTime-startTime;
+//    _timeLb.text=[NSString stringWithFormat:@"Total Time:%fs",totalTime];
+//    _wordsLb.text=[NSString stringWithFormat:@"Total Words:%i characters",sourceText.length];
+//    _outputTv.text=outputPinyin;
 }
 
 - (void)didReceiveMemoryWarning

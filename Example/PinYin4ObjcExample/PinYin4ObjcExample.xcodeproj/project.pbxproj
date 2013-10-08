@@ -410,7 +410,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
+				SDKROOT = iphoneos6.1;
 			};
 			name = Debug;
 		};
@@ -434,7 +434,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				SDKROOT = iphoneos;
+				SDKROOT = iphoneos6.1;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -446,6 +446,7 @@
 				GCC_PREFIX_HEADER = "PinYin4ObjcExample/PinYin4ObjcExample-Prefix.pch";
 				INFOPLIST_FILE = "PinYin4ObjcExample/PinYin4ObjcExample-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos6.1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -457,6 +458,7 @@
 				GCC_PREFIX_HEADER = "PinYin4ObjcExample/PinYin4ObjcExample-Prefix.pch";
 				INFOPLIST_FILE = "PinYin4ObjcExample/PinYin4ObjcExample-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos6.1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -514,6 +516,7 @@
 				1D40375517E740210061FF18 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1D40375617E740210061FF18 /* Build configuration list for PBXNativeTarget "PinYin4ObjcExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +525,7 @@
 				1D40375817E740210061FF18 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

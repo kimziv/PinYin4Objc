@@ -9,8 +9,13 @@
 #define RIGHT_BRACKET @")"
 #define COMMA @","
 
-#define kCacheKeyForUnicode2Pinyin @"cache.key.for.unicode.to.pinyin"
+#ifdef DEBUG
+#define PYLog(...) NSLog(__VA_ARGS__)
+#else
+#define PYLog(__unused ...)
+#endif
 
+#define kCacheKeyForUnicode2Pinyin @"UnicodeToPinyin"
 static inline NSString* cachePathForKey(NSString* directory, NSString* key) {
 	return [directory stringByAppendingPathComponent:key];
 }
@@ -22,10 +27,6 @@ static inline NSString* cachePathForKey(NSString* directory, NSString* key) {
 @end
 
 @implementation ChineseToPinyinResource
-//@synthesize unicodeToHanyuPinyinTable=_unicodeToHanyuPinyinTable;
-//- (NSDictionary *)getUnicodeToHanyuPinyinTable {
-//    return _unicodeToHanyuPinyinTable;
-//}
 
 - (id)init {
     if (self = [super init]) {
@@ -37,13 +38,16 @@ static inline NSString* cachePathForKey(NSString* directory, NSString* key) {
 
 - (void)initializeResource {
     NSString* cachesDirectory = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES)[0];
-	NSString* oldCachesDirectory = [[[cachesDirectory stringByAppendingPathComponent:[[NSProcessInfo processInfo] processName]] stringByAppendingPathComponent:@"PinYinCache"] copy];
-    
-	if([[NSFileManager defaultManager] fileExistsAtPath:oldCachesDirectory]) {
-		[[NSFileManager defaultManager] removeItemAtPath:oldCachesDirectory error:NULL];
-	}
-	
 	_directory = [[[cachesDirectory stringByAppendingPathComponent:[[NSBundle mainBundle] bundleIdentifier]] stringByAppendingPathComponent:@"PinYinCache"] copy];
+    NSFileManager *fileManager=[NSFileManager defaultManager];
+    if (![fileManager fileExistsAtPath:_directory])
+    {
+        NSError *error=nil;
+        if (![fileManager createDirectoryAtPath:_directory withIntermediateDirectories:YES attributes:nil error:&error]) {
+            PYLog(@"Error, s is %@, %s, %s, %d",error.description, __FILE__ ,__FUNCTION__, __LINE__);
+        }
+        
+    }
     
     NSDictionary *dataMap=(NSDictionary *)[self cachedObjectForKey:kCacheKeyForUnicode2Pinyin];
     if (dataMap) {
@@ -54,12 +58,11 @@ static inline NSString* cachePathForKey(NSString* directory, NSString* key) {
         NSArray *lines = [dictionaryText componentsSeparatedByString:@"\r\n"];
         __block NSMutableDictionary *tempMap=[[NSMutableDictionary alloc] init];
         @autoreleasepool {
-            [lines enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-                NSArray *lineComponents=[obj componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
-                //NSLog(@"%@, %@",lineComponents[0],lineComponents[1]);
-                [tempMap setObject:lineComponents[1] forKey:lineComponents[0]];
-            }];
-        }
+                [lines enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+                    NSArray *lineComponents=[obj componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+                    [tempMap setObject:lineComponents[1] forKey:lineComponents[0]];
+                }];
+         }
         self->_unicodeToHanyuPinyinTable=tempMap;
         [self cacheObjec:self->_unicodeToHanyuPinyinTable forKey:kCacheKeyForUnicode2Pinyin];
     }
@@ -67,9 +70,13 @@ static inline NSString* cachePathForKey(NSString* directory, NSString* key) {
 
 - (id<NSCoding>)cachedObjectForKey:(NSString*)key
 {
-    NSData *data = [NSData dataWithContentsOfFile:cachePathForKey(_directory, key) options:0 error:NULL];
-    if (data) {
-           return [NSKeyedUnarchiver unarchiveObjectWithData:data];
+    NSError *error=nil;
+    NSData *data = [NSData dataWithContentsOfFile:cachePathForKey(_directory, key) options:0 error:&error];
+   // NSAssert4((!error), @"Error, s is %@, %s, %s, %d",error.description, __FILE__ ,__FUNCTION__, __LINE__);
+    if (!error) {
+        if (data) {
+            return [NSKeyedUnarchiver unarchiveObjectWithData:data];
+        }
     }
     return nil;
 }
@@ -78,8 +85,12 @@ static inline NSString* cachePathForKey(NSString* directory, NSString* key) {
 {
     NSData* data= [NSKeyedArchiver archivedDataWithRootObject:obj];
     NSString* cachePath = cachePathForKey(_directory, key);
-	dispatch_async(dispatch_get_main_queue(), ^{
-        [data writeToFile:cachePath atomically:YES];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            NSError *error=nil;
+            [data writeToFile:cachePath options:NSDataWritingAtomic error:&error];
+            if (error){
+                PYLog(@"Error, s is %@, %s, %s, %d",error.description, __FILE__ ,__FUNCTION__, __LINE__);
+            }
     });
 }
 
